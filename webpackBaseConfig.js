@@ -119,33 +119,33 @@ module.exports = {
             chunks: ['slide-pack'],
             filename: path.join(__dirname, 'public/views/build/slide-pack-scripts.ejs'),
             inject: false
-        }),
-        new CopyWebpackPlugin([
-            {
-                context: path.join(__dirname, 'node_modules/mathjax'),
-                from: {
-                    glob: '**/*',
-                    dot: false
-                },
-                to: 'MathJax/'
-            },
-            {
-                context: path.join(__dirname, 'node_modules/emojify.js'),
-                from: {
-                    glob: '**/*',
-                    dot: false
-                },
-                to: 'emojify.js/'
-            },
-            {
-                context: path.join(__dirname, 'node_modules/reveal.js'),
-                from: {
-                    glob: '**/*',
-                    dot: false
-                },
-                to: 'reveal.js/'
-            }
-        ])
+        })//,
+        // new CopyWebpackPlugin([
+        //     {
+        //         context: path.join(__dirname, 'node_modules/mathjax'),
+        //         from: {
+        //             glob: '**/*',
+        //             dot: false
+        //         },
+        //         to: 'MathJax/'
+        //     },
+        //     {
+        //         context: path.join(__dirname, 'node_modules/emojify.js'),
+        //         from: {
+        //             glob: '**/*',
+        //             dot: false
+        //         },
+        //         to: 'emojify.js/'
+        //     },
+        //     {
+        //         context: path.join(__dirname, 'node_modules/reveal.js'),
+        //         from: {
+        //             glob: '**/*',
+        //             dot: false
+        //         },
+        //         to: 'reveal.js/'
+        //     }
+        // ])
     ],
 
     entry: {
@@ -204,9 +204,9 @@ module.exports = {
             path.join(__dirname, 'node_modules/codemirror/addon/scroll/simplescrollbars.css'),
             path.join(__dirname, 'node_modules/codemirror/addon/search/matchesonscrollbar.css'),
             path.join(__dirname, 'node_modules/codemirror/theme/monokai.css'),
-            path.join(__dirname, 'node_modules/codemirror/theme/one-dark.css'),
+            // path.join(__dirname, 'node_modules/codemirror/theme/one-dark.css'),
             path.join(__dirname, 'node_modules/codemirror/mode/tiddlywiki/tiddlywiki.css'),
-            path.join(__dirname, 'node_modules/codemirror/mode/mediawiki/mediawiki.css'),
+            // path.join(__dirname, 'node_modules/codemirror/mode/mediawiki/mediawiki.css'),
             path.join(__dirname, 'public/css/github-extract.css'),
             path.join(__dirname, 'public/vendor/showup/showup.css'),
             path.join(__dirname, 'public/css/mermaid.css'),
@@ -340,7 +340,7 @@ module.exports = {
         ],
         extensions: ["", ".js"],
         alias: {
-            codemirror: path.join(__dirname, 'node_modules/codemirror/codemirror.min.js'),
+            codemirror: path.join(__dirname, 'node_modules/codemirror/lib/codemirror.js'),
             inlineAttachment: path.join(__dirname, 'public/vendor/inlineAttachment/inline-attachment.js'),
             jqueryTextcomplete: path.join(__dirname, 'public/vendor/jquery-textcomplete/jquery.textcomplete.js'),
             codemirrorSpellChecker: path.join(__dirname, 'public/vendor/codemirror-spell-checker/spell-checker.min.js'),

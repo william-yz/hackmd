@@ -430,7 +430,7 @@ if (!textit) throw new Error("There was no textit area!");
 window.editor = CodeMirror.fromTextArea(textit, {
     mode: defaultEditorMode,
     backdrop: defaultEditorMode,
-    keyMap: "sublime",
+    keyMap: "default",
     viewportMargin: viewportMargin,
     styleActiveLine: true,
     lineNumbers: true,
@@ -439,7 +439,7 @@ window.editor = CodeMirror.fromTextArea(textit, {
     highlightSelectionMatches: true,
     indentUnit: 4,
     continueComments: "Enter",
-    theme: "one-dark",
+    theme: "default",
     inputStyle: "textarea",
     matchBrackets: true,
     autoCloseBrackets: true,
